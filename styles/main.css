@@ -1,0 +1,30 @@
+
+@font-face {
+    font-family: Montserrat, sans-serif;
+    src: url(../fonts/Montserrat-Bold.ttf); 
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: Montserrat, sans-serif;
+    src: url(../fonts/Montserrat-Regular.ttf); 
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.header-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 68.5%;
+}
