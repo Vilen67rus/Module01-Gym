@@ -20,7 +20,10 @@
                         <li><a href="#">О компании</a></li>
                     </ul>
                 </nav>
-                <div class="social">
+            <div class="header-burger">
+                <button class="modal-burger" onclick="openModal()"></button>
+            </div>
+            <div class="social">
                     <ul>
                         <li>
                             <a href="#" class="header-IN"></a>
@@ -29,7 +32,7 @@
                             <a href="#" class="header-FB"></a>
                         </li>
                     </ul>
-                </div>
+            </div>
         </div>
     </header>
     <!--1screen-->
@@ -69,7 +72,7 @@
                         <div class="event-gradient">
                             <p class="date">29.06 - 4.07</p>
                             <p class="title">Марафон выносливости</p>
-                            <a href="#" class="button-link">учавствовать</a>
+                            <a href="#background" class="button-link">учавствовать</a>
                             <p class="type">марафон</p>
                         </div>
                     </div>
@@ -77,7 +80,7 @@
                         <div class="event-gradient">
                             <p class="date">9.07</p>
                             <p class="title">Как стать тренером?</p>
-                            <a href="#" class="button-link">учавствовать</a>
+                            <a href="#background" class="button-link">учавствовать</a>
                             <p class="type">вебинар</p>
                         </div>
                     </div>
@@ -85,7 +88,7 @@
                         <div class="event-gradient">
                             <p class="date">15.07</p>
                             <p class="title">Йога, как стиль жизни</p>
-                            <a href="#" class="button-link">учавствовать</a>
+                            <a href="#background" class="button-link">учавствовать</a>
                             <p class="type">вебинар</p>
                         </div>
                     </div>
@@ -183,6 +186,7 @@
                 </div>
             </div>    
         </div>
+        <!--5screen-->
         <div class="company">
             <div class="container">
                 <div class="company-box">
@@ -280,5 +284,73 @@
             </div>
         </div>
     </footer>
+
+<!-- Модал -->
+
+    <div id="modal" class="modal">
+        <a href="#" class="modal-logo"></a>
+        <ul class="header-nav-modal">
+            <li><a href="#" class="active">Мероприятия</a></li>
+            <li><a href="#">Расписание</a></li>
+            <li><a href="#">О компании</a></li>
+        </ul>
+        <div class="button">
+            <a href="#" class="header-IN"></a>
+            <a href="#" class="header-FB"></a>
+        </div>
+        <button class="modal-close" onclick="closeModal()"></button>
+    </div>
+
+    <!-- Pop up -->
+    <div id="background" class="background">
+        <div id="popup" class="popup">
+            <a href="##" class="popup-close"></a>
+            <p class="popup-title">
+                Заявка на участие "Марафон выносливости"
+                <span class="yellow-count"></span>
+            </p>
+            <p class="popup-text">
+                Заполните все поля, и мы пришлем информацию в ближайшее время
+            </p>
+            <form action="#" class="popup-form">
+                <input type="email" placeholder="Ваш e-mail" name="email" class="popup-email" required>
+                <input type="tel" placeholder="Ваш номер телефона" name="phone" class="popup-phone" required>
+                <button type="submit" class="btn-popup">
+                    отправить
+                </button>
+                <p class="popup-text-empty"></p>
+            </form>
+        </div>
+    </div> 
+
+
+    <script>
+        // Scroll 
+        const links = document.querySelectorAll(".banner-link");
+
+        for (const link of links) {
+            link.addEventListener("click", clickHandler);
+        }
+
+        function clickHandler(e) {
+            e.preventDefault();
+            const href = this.getAttribute("href");
+
+            document.querySelector(href).scrollIntoView({
+                behavior: "smooth"
+        });
+        }
+
+
+       // Menu
+
+       function openModal() {
+           document.getElementById("modal").style.top = "0px";
+       }
+
+       function closeModal() {
+           document.getElementById("modal").style.top = "-400px";
+       }
+    </script>
 </body>
 </html>
