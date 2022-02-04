@@ -322,6 +322,7 @@ h3 {
     justify-content: end;
     position: relative;
     padding: 15px 30px 12px;
+    transition: 3s;
 }
 .time-grid-item:nth-child(1) {
     grid-column: 1 / 2;
@@ -397,8 +398,9 @@ h3 {
     font-weight: 700;
     font-size: 18px;
     line-height: 125%;
-    margin-top: 25px;
     transition: .2s linear;
+    margin: 0;
+    padding-top: 42px;
 }
 .content-text {
     display: none;
@@ -415,10 +417,10 @@ h3 {
     background-color: #F3F3F3;
 }
 .subscribe-header {
-    max-width: 640px;
+    max-width: 590px;
     margin: 0 auto;
-    padding-top: 160px;
-    padding-left: 55px;
+    margin-top: 160px;
+    padding-bottom: 84px;
 }
 .subscribe-count {
     position: relative;
@@ -430,8 +432,8 @@ h3 {
     border-radius: 100%;
     width: 53px;
     height: 53px;
-    top: 55px;
-    right: 565px;
+    top: 60px;
+    right: 570px;
     z-index: -1;
 }
 .subscribe-title {
@@ -445,15 +447,14 @@ h3 {
 .subscribe-form {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 24px;
+    gap: 20px;
     padding-top: 169px;
 }
 .subscribe-email {
     background-color: white;
 	font-size: 18px;
     font-weight: 400;
-	padding: 21px 150px 21px 19px;
+	padding: 23px 129px 21px 10px;
     border: none;
     outline: none;
 }
@@ -474,11 +475,8 @@ h3 {
 .subscribe-label {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     margin-top: 13px;
     margin-bottom: 0;
-    padding-bottom: 86px;
-    padding-left: 6px;
 }
 .subscribe-label-default {
     display: none;
@@ -562,88 +560,65 @@ h3 {
 
 /* О компании */
 
-.company-box-item1 h3 {
-    margin: 0;
+.company {
+    margin-top: 160px;
+    margin-bottom: 155px;
 }
-.company-p {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 27px;
-    margin: 0;
-    opacity: 0.6;
-}
-.company-title {
-    font-size: 18px;
-    font-weight: 700;
-    margin: 0;
-}
-.company-box1 {
+.company-flex {
     display: flex;
     justify-content: space-between;
-    padding-top: 160px;
-    padding-bottom: 82px;
+    margin-bottom: 63px;
+    line-height: 150%;
 }
-.company-p-item1 {
-    margin-top: 20px;
-    margin-bottom: 60px;
+.company-title {
+    margin: 0;
+}
+.company-text {
     max-width: 483px;
-    opacity: 1;
+    margin-bottom: 57px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
 }
 .btn-company {
-    text-decoration: none;
-    color: #2B3541;
-    text-transform: uppercase;
+    padding: 21px 51px;
     font-size: 16px;
-    font-weight: 700;
-    padding: 22px 55px;
-    border: none;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #2B3541;
     background-color: #FBF138;
+    text-decoration: none;
+    font-weight: 700;
 }
 .btn-company:hover {
     color: #FBF138;
     background-color: #2B3541;
-    cursor: pointer;
 }
-.company-box2 {
+.company-img {
+    background: linear-gradient(180deg, rgba(251, 241, 56, 0.3) 0%, rgba(253, 249, 182, 0) 100%), url(../files/trainer@2x.png);
+    width: 580px;
+    height: 335px;
+    background-position: center;
+    background-size: cover;
+}
+.company-box {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 170px;
+    gap: 67px;
 }
-.company-box2 .company-title {
-    margin-bottom: 24px;
+.company-advantages-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 125%;
+    margin-bottom: 20px;
 }
-.company-box-item2 {
-    background-image: url(../files/trainer@2x.png);
-    width: 581px;
-    height: 335px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+.company-advantages-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
 }
-.company-box-item2-grad {
-    background: linear-gradient(180deg, rgba(251, 241, 56, 0.3) 0%, rgba(253, 249, 182, 0) 100%);
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   transition: .2s;
-}
-.company-box-item3 {
-    flex-basis: 22%;
-}
-.company-box-item4 {
-    flex-basis: 27%;
-}
-.company-box-item5 {
-    flex-basis: 21%;
-}
-.company-box-item6 {
-    flex-basis: 18%;
-}
-.company-box-item7,
-.company-box-item8 {
-    display: none;
-}
+
 
 /* Футер */
 
@@ -944,297 +919,14 @@ h3 {
 @media (max-width: 1170px) {
     
 }
-@media (max-width: 1000px) {
-    .box-flex {
-        flex-direction: column;
-        position: relative;
-        width: 100%;
-    }
-    .header-item {
-        justify-content: space-between;
-    }
-    .event-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        margin-bottom: 100px;
-    }
-    .event-one {
-        width: 42%;
-        height: 60vw;
-    }
-    .event-two {
-        width: 42%;
-        height: 60vw;
-    }
-    .event-three {
-        width: 91%;
-        height: 100vw;
-    }
-    .footer-box {
-        display: block;
-    }
-    .footer-item {
-        display: block;
-        margin: 0 auto;
-    }
-    .footer-logo {
-        margin: 0 auto;
-    }
-    nav {
-        display: block;
-        margin: 0 auto;
-    }
-    .footer-nav {
-        display: flex;
-        justify-content: space-evenly;
-        gap: 90px;
-    }
-}
-
 @media (min-width: 751px) {
     .header-burger {
         display: none;
     }
-    
 }
 @media (max-width: 750px) {
     nav {
         display: none;
     }
-    .time-date {
-        font-size: 16px;
-    }
-    .subscribe-title {
-        max-width: 300px;
-        text-align: center;
-        position: relative;
-        margin: 0 auto;
-        padding-bottom: 51px;
-        line-height: 30px;
-        padding-top: 57px;
-    }
-    .subscribe-form {
-        padding-top: 20px;
-    }
-    .subscribe-form-before {
-        display: none;
-    }
-    .subscribe-form-after {
-        display: block;
-    }
-    .subscribe-email-after {
-        display: block;
-        padding: 21px 0px 21px 19px;
-        width: 96%;
-    }
-    .subscribe-label {
-        padding-left: 0px;
-        padding-bottom: 40px;
-    }
-    .btn-subscribe-after {
-        display: block;
-    }
-    .subscribe-header {
-        padding-bottom: 40px;
-    }
-    .btn-count {
-        right: 254px;
-        top: 45px;
-        width: 31px;
-        height: 31px;
-    }
-    h3 {
-        font-size: 26px;
-    }
 
-    .time-grid {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .btn-company {
-    display: none;
-}
-    .btn-company-7 {
-        text-decoration: none;
-        color: #2B3541;
-        text-transform: uppercase;
-        font-size: 16px;
-        font-weight: 700;
-        padding: 22px 55px;
-        border: none;
-        background-color: #FBF138;
-    }
-    .btn-company-7:hover {
-        color: #FBF138;
-        background-color: #2B3541;
-        cursor: pointer;
-    }
-   
-    .company-box-item {
-        width: 100%;
-        max-width: 800px;
-        height: 125px;
-        margin: 0 auto;
-    }
-    .company-box-item8 {
-        background-image: url(../files/trainer@2x.png);
-        height: 60vw;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        margin-bottom: 80px;
-    }
-    .company-box-item1:nth-child(1) {
-        grid-area: a;
-    }
-    .company-box-item2:nth-child(2) {
-        display: none;
-    }
-    .company-box-item3:nth-child(3) {
-        grid-area: c;
-    }
-    .company-box-item4:nth-child(4) {
-        grid-area: d;
-    }
-    .company-box-item5:nth-child(5) {
-        grid-area: e;
-    }
-    .company-box-item6:nth-child(6) {
-        grid-area: f;
-    }
-    .company-box-item7:nth-child(7) {
-        grid-area: g;
-    }
-    .company-box-item7,
-    .company-box-item8 {
-        display: block;
-    }
-    .company-box1,
-    .company-box2 {
-        display: grid;
-        width: 100%;
-        max-width: 800px;
-        justify-items: center;
-    }
-    .company-box1 {
-        padding-top: 100px;
-        justify-content: start;
-    }
-    .company-box2 {
-        padding-bottom: 0px;
-        margin-top: 20px;
-    }
-    .company-box {
-        display: grid;
-        justify-items: center;
-        grid-template-areas: 'a'
-                             'c'
-                             'd'
-                             'e'
-                             'f'
-                             'g';
-    }
-
-    .footer-nav {
-        gap: 60px;
-    }
-
-
-    .law {
-        display: block;
-    }
-    .law-protection {
-        display: flex;
-        justify-content: center;
-    }
-    .law-text {
-        display: flex;
-        justify-content: center;
-    }
-}
-@media (max-width: 480px) {
-    .company-box1 {
-        padding-top: 80px;
-        height: 165px;
-        padding-bottom: 0;
-    }
-    .company-p {
-        font-size: 16px;
-        line-height: 24px;
-    }
-    .company-p-item1 {
-        margin-top: 16px;
-        margin-bottom: 0;
-    }
-    .company-box {
-        gap: 40px;
-    }
-    .company-box2 {
-        margin-top: 0;
-    }
-    .company-title {
-        font-size: 16px;
-    }
-    .company-box2 .company-title {
-        margin-bottom: 16px;
-    }
-    .company-box-item {
-        height: 123px;
-    }
-    .company-p-item3 {
-        max-width: 208px;
-    }
-    .company-p-item4 {
-        max-width: 223px;
-    }
-    .company-p-item5 {
-        max-width: 184px;
-    }
-    .company-p-item6 {
-        max-width: 184px;
-    }
-    .company-box-item6 {
-        height: 140px;
-    }
-    .company-box-item7 {
-        height: 90px;
-    }
-    .btn-company-7 {
-        padding: 20px 0;
-        width: 100%;
-        display: block;
-        max-width: 601px;
-        text-align: center;
-    }
-    .company-box-item8 {
-        height: 60vw;
-        margin-bottom: 80px;
-    }
-    .company-box {
-        grid-template-areas: none;
-    }
-    .company-box2 {
-        justify-content: unset;
-    }
-    .company-box-item3 {
-        margin-top: 40px;
-    }
-
-
-    .footer {
-        background-color: white;
-    }
-    .footer-nav {
-        gap: 40px;
-    }
-    .footer-nav a {
-        font-size: 12px;
-    }
-    .law {
-        font-size: 10px;
-        line-height: 150%;
-    }
 }
