@@ -5,33 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gym</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <header id="headerTop">
         <div class="container">
-            <div class="header-item">
-                <a href="#" class="header-logo"></a>
-                <nav>
-                    <ul class="header-nav">
-                        <li><a href="#">Мероприятия</a></li>
-                        <li><a href="#">Расписание</a></li>
-                        <li><a href="#">О компании</a></li>
-                    </ul>
-                </nav>
-            <div class="header-burger">
-                <button class="modal-burger" onclick="openModal()"></button>
-            </div>
-            <div class="social">
-                    <ul>
-                        <li>
-                            <a href="#" class="header-IN"></a>
-                        </li>
-                        <li>
-                            <a href="#" class="header-FB"></a>
-                        </li>
-                    </ul>
+            <div class="header">
+                <div class="header-item">
+                    <a href="#" class="header-logo"></a>
+                    <button class="modal-burger" onclick="openModal()"></button>
+                    <nav>
+                        <ul class="header-nav">
+                            <li><a href="#">Мероприятия</a></li>
+                            <li><a href="#">Расписание</a></li>
+                            <li><a href="#">О&nbsp;компании</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="social">
+                    <a href="#" class="header-IN"></a>
+                    <a href="#" class="header-FB"></a>
+                </div>
             </div>
         </div>
     </header>
@@ -280,11 +278,12 @@
                 </div>
             </div>
             <div class="law">
-                <span class="law-protection">
-                    © 2020, Все права защищены
-                </span>
                 <p class="law-text">
-                    Сделано в рамках курса учебной платформы <a href="#" class="law-web">Annblok</a>
+                    © 2020, Все права защищены
+                </p>
+                <p class="law-text">
+                    Сделано в рамках курса учебной платформы 
+                    <a href="#" class="law-web">Annblok</a>
                 </p>
             </div>
         </div>
