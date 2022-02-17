@@ -114,6 +114,8 @@ h3 {
     display: flex;
     position: relative;
     width: 100%;
+    padding-bottom: 220px;
+    margin-bottom: 160px;
 }
 .banner-box {
     background-position:center left;
@@ -161,42 +163,42 @@ h3 {
 }
 .banner-box-gradient {
     display: flex;
+    justify-content: end;
     gap: 20px;
-    position: absolute;
+    max-width: 790px;
     z-index: -1;
-    right: -78px;
+    position: absolute;
+    right: -75px;
+    width: 100%;
+    height: 100%;
 }
 .banner-box-gradient-left {
-    background: linear-gradient(90deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 145.23%);
+    flex-basis: 70%;
+    background-image: linear-gradient(90deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 145.23%);
     opacity: 0.2;
-    width: 535px;
-    height: 850px;
 }
 .banner-box-gradient-right {
-    background: linear-gradient(90deg, #FDF9B6 0%, rgba(253, 249, 182, 0.7) 166.81%);
+    flex-basis: 30%;
+    background-image: linear-gradient(90deg, #FDF9B6 0%, rgba(253, 249, 182, 0.7) 166.81%);
     opacity: 0.2;
-    width: 235px;
-    height: 850px;
 }
 .banner-box-image {
     position: absolute;
-    top: 42px;
-    width: 125%;
-    height: 95%;
-    right: -100px;
+    right: -97px;
+    top: 40px;
 }
-.arrow {
-    cursor: pointer;
-    background-image: url(../icons/Arrow.svg);
+.btn-down {
+    display: block;
+    background-image: url(../icons/arrow.svg);
+    width: 52px;
+    height: 55px;
     background-repeat: no-repeat;
-    background-color: #fff;
-    border: none;
-    width: 56px;
-    height: 58px;
-    margin-top: 205px;
-    transition: 0.2s;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    transition: .3s;
 }
-.arrow:hover {
+.btn-down:hover {
     transform: scale(1.2);
 }
 /* event */
@@ -237,6 +239,7 @@ h3 {
     color: #FBF138;
     padding: 20px 37px;
     margin-left: 30px;
+    opacity: 0;
 }
 .event-one {
     width: 367px;
@@ -278,9 +281,6 @@ h3 {
 .event-gradient:hover {
     background: linear-gradient(180deg, rgba(251,241,56,.6) 0%, rgba(253, 249, 182, 0) 100%);
 }
-.button-link {
-    opacity: 0;
-}
 .event-gradient:hover .button-link {
     opacity: 1;
 }
@@ -296,6 +296,9 @@ h3 {
 }
 .event-gradient:hover .type {
     opacity: 0;
+}
+.btn-mobile {
+    display: none;
 }
 /* расписание тренировок */
 
@@ -624,6 +627,9 @@ h3 {
     font-size: 18px;
     line-height: 150%;
 }
+.company-mini {
+    display: none;
+}
 
 
 /* Футер */
@@ -707,6 +713,7 @@ h3 {
     padding: 0;
     width: 27px;
     height: 27px;
+    transition: .3s;
 }
 .footer-button-face {
     align-items: center;
@@ -716,6 +723,19 @@ h3 {
     padding: 0;
     width: 27px;
     height: 27px;
+    transition: .3s;
+}
+.footer-nav a::after {
+    content: "";
+    width: 0;
+    transition: 0.3s;
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    border-bottom: 1px solid #2B3541;
+}
+.footer-nav a:hover::after {
+    width: 100%;
 }
 .law {
     display: flex;
@@ -732,6 +752,20 @@ h3 {
     color: #2B3541;
     margin: 0;
 }
+.footer-button-inst:hover {
+    transform: scale(1.2666);
+}
+.footer-button-face:hover {
+    transform: scale(1.2666);
+}
+.law-web:hover {
+    cursor: pointer;
+    color: #2B3541;
+    opacity: 1;
+}
+
+
+
 
 /* -- Модал --*/ 
 
@@ -922,27 +956,44 @@ h3 {
 
 /* медиа */
 
+@media (max-width: 1520px) {
+    .banner-box-gradient {
+        right: 0px;
+    }
+}
+@media (max-width: 1320px) {
+    .banner-box-gradient {
+        right: 0px;
+    }
+}
+@media (max-width: 1280px) {
+    .box-flex {
+        padding-bottom: 220px;
+    }
+}
+
+
 @media (max-width: 1175px) {
     .header-logo {
         margin-right: 58px;
     }
     .box-flex {
-        flex-direction: column;
-        position: relative;
-        width: 100%;
+        padding-bottom: 110px;
     }
-    .box-flex {
-        flex-direction: column;
+    .banner-box {
+        padding-top: 25px;
     }
     .banner-box-gradient {
+        max-width: 430px;
+        max-height: 540px;
         right: 0;
-        max-width: 75%;
     }
-    .banner-box-image {
-        width: 96%;
-        height: 95%;
-        position: relative;
+    .banner-box-image { 
+        right: 0px;
+        max-width: 468px;
+        top: 154px;
     }
+
     .event-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -950,15 +1001,43 @@ h3 {
                             'a b'
                             'c c';
     }
+    .event-one:nth-child(1) {
+        grid-area: a;
+        height: 60vw;
+        width: 100%;
+    }
+    .event-two:nth-child(2) {
+        grid-area: b;
+        height: 60vw;
+        width: 100%;
+    }
+    .event-three:nth-child(3) {
+        grid-area: c;
+        height: 50vw;
+        width: 100%;
+    }
+    .btn-mobile {
+        display: block;
+        position: absolute;
+        background-image: url(../icons/btn-mobile.png);
+        height: 30px;
+        width: 30px;
+        right: 0;
+        bottom: 0;
+    }
+    .type {
+        left: 0;
+        right: auto;    
+    }
 
 
 }
-@media (min-width: 769px) {
+@media (min-width: 901px) {
     .modal-burger {
         display: none;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .header-item {
         flex-basis: 23%;
     }
@@ -980,6 +1059,17 @@ h3 {
         padding: 43px 0 0;
         max-width: 360px;
     }
+    .banner-box-gradient {
+        max-width: 365px;
+        max-height: 429px;
+        gap: 13px;
+        right: 0px;
+        top: 12px;
+    }
+    .banner-box-image {
+        max-width: 401px;
+        top: 99px;
+    }
     .banner-title {
         margin-bottom: 46px;
     }
@@ -991,18 +1081,11 @@ h3 {
         max-width: 255px;
         margin-bottom: 65px;
     }
-    .arrow {
+    .btn-down {
         margin-top: 68px;
         width: 39px;
         height: 40px;
         background-size: cover;
-    }
-    .banner-box-image {
-    width: 73%;
-    height: 95%;
-    position: relative;
-    top: 120px;
-    right: -25px;
     }
     .banner {
         margin-bottom: 105px;
@@ -1015,10 +1098,222 @@ h3 {
         line-height: 100%;
         letter-spacing: 0.03em;
     }
+    h3 {
+        font-size: 26px;
+    }
+
+    .event-grid {
+        margin-top: 20px;
+        margin-bottom: 80px;
+    }
+    .event-one:nth-child(1) {
+        height: 40vw;
+    }
+    .event-two:nth-child(2) {
+        height: 40vw;
+    }
+    .event-three:nth-child(3) {
+        height: 44vw;
+    }
+    .date {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 100%;
+        margin-left: 28px;
+        margin-bottom: 16px;
+        margin-top: 19px;
+    }
+    .title {
+        margin-left: 26px;
+        margin-bottom: 60px;
+        font-size: 16px;
+        line-height: 120%;
+        max-width: 170px;
+    }
+    .button-link {
+        display: none;
+    }
+    .type {
+        display: block;
+        padding: 5px 15px;
+        font-size: 12px;
+    }
+    .time-date {
+        font-size: 16px;
+        line-height: 120%;
+        opacity: 0.7;
+        margin-bottom: 27px;
+    }
+
+
+
+    .time-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 332px 224px 224px;
+        grid-auto-flow: row;
+    }
+    .time-grid-item:nth-child(1) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .time-grid-item:nth-child(2) {
+        grid-column: 2 / 2;
+        grid-row: 1 / 2;
+    }
+    .time-grid-item:nth-child(3) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 2;
+    }
+    .time-grid-item:nth-child(4) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 2;
+    }
+    .time-grid-item:nth-child(5) {
+        grid-column: 1 / 1;
+        grid-row: 3 / 4;
+    }
+    .time-grid-item:nth-child(6) {
+        grid-column: 2 / 2;
+        grid-row: 3 / 4;
+    }
+
+
+    .btn-count {
+        right: 275px;
+        top: 45px;
+        width: 31px;
+        height: 31px;
+    }
+    .subscribe-title {
+        text-align: center;
+        padding-top: 57px;
+        max-width: 340px;
+    }
+    .subscribe-header {
+        margin-top: 95px;
+        max-width: 340px;
+        padding-bottom: 50px;
+    }
+    .subscribe-form {
+        flex-direction: column;
+        align-items: center;
+        gap: 47px;
+    }
+
+    .subscribe-form-before {
+        display: none;
+    }
+    .subscribe-form-after {
+        display: block;
+        padding-top: 87px;
+    }
+    .subscribe-email-after {
+        display: block;
+    }
+    .btn-subscribe-after {
+        display: block;
+    }
+    .subscribe-email-after {
+        padding: 21px 0px 21px 19px;
+        width: 97%;
+    }
+    .subscribe-label {
+        align-items: flex-start;
+    }
+    .subscribe-label-text {
+        margin-bottom: 40px;
+    }
+
+
+    .company {
+        margin-top: 95px;
+    }
+    .company-img {
+        width: 55%;
+        height: 225px
+    }
+    .company-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .company-advantages-title {
+        font-size: 16px;
+        line-height: 120%;
+    }
+    .company-advantages-text {
+        font-size: 16px;
+        opacity: .6;
+    }
+
+    .footer-box {
+        display: block;
+    }
+    .footer-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-basis: 55.5%;
+        margin-bottom: 30px;
+    }
+    .footer-nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+    }
+
+
+
+}
+@media (max-width: 620px) {
+
 }
 
 
 
+@media (max-width: 560px){
+    .footer {
+        background-color: white;
+    }
+    .footer-item {
+        display: block;
+        margin: 0 auto;
+    }
+    .footer-logo {
+        margin: 0 auto;
+    }
+    .footer-nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 0;
+        margin-top: 40px;
+    }
 
-@media (max-width: 768px){
+
+    .footer-box {
+        padding-top: 0px;
+    }
+    .footer-nav a {
+        font-size: 12px;
+    }
+    .footer-nav {
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    .footer-box {
+        margin-bottom: 40px;
+    }
+    .btn-count {
+        right: 255px;
+        top: -10px;
+        width: 31px;
+        height: 31px;
+    }
+    .law-protection {
+        margin-bottom: 16px;
+    }
+    .law {
+        font-size: 12px
+    }
 }
