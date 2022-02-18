@@ -1266,7 +1266,28 @@ h3 {
 
 }
 @media (max-width: 620px) {
-
+    .box-flex {
+        flex-direction: column;
+        padding-bottom: 0px;
+        margin-bottom: 125px;
+    }
+    .banner-box-gradient {
+        position: relative;
+        max-width: 340px;
+        height: 310px;
+        top: 45px;
+    }
+    .banner-box-image {
+        top: 30px;
+        max-width: 100%;
+    }
+    .btn-down {
+        display: none;
+    }
+    .banner-link {
+        display: block;
+        text-align: center;
+    }
 }
 
 
@@ -1315,5 +1336,14 @@ h3 {
     }
     .law {
         font-size: 12px
+    }
+
+}
+@media (max-width: 390px) {
+    .container {
+        padding: 0 10px;
+    }
+    .banner-text p {
+        margin-bottom: 40px;
     }
 }
