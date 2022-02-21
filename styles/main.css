@@ -706,26 +706,6 @@ h3 {
     align-items: center;
     gap: 30px;
 }
-.footer-button-inst {
-    align-items: center;
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
-    padding: 0;
-    width: 27px;
-    height: 27px;
-    transition: .3s;
-}
-.footer-button-face {
-    align-items: center;
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
-    padding: 0;
-    width: 27px;
-    height: 27px;
-    transition: .3s;
-}
 .footer-nav a:after {
     content: "";
     width: 0;
@@ -752,11 +732,9 @@ h3 {
     color: #2B3541;
     margin: 0;
 }
-.footer-button-inst:hover {
-    transform: scale(1.2666);
-}
-.footer-button-face:hover {
-    transform: scale(1.2666);
+.footer-inst-face a:hover {
+    transform: scale(1.2);
+    opacity: 1;
 }
 .law-web:hover {
     cursor: pointer;
