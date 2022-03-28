@@ -1329,6 +1329,8 @@ h3 {
     .btn-company-mini:hover {
         color: #FBF138;
         background-color: #2B3541;
+    }
+
     .company-img-mini {
         background: linear-gradient(180deg, rgba(251, 241, 56, 0.3) 0%, rgba(253, 249, 182, 0) 100%), url(../files/trainer.png);
         width: 100%;
