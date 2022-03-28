@@ -56,12 +56,12 @@
                             &gt;&nbsp;15&nbsp; тренировок
                         </h2>
                         <div class="banner-text">
-                            <p class="banner-text">
+                            <p class="banner-text-p">
                                 в области спортивной физиологии и нутрициологии
                             </p>
                             <a href="#" class="banner-link">Узнать подробнее</a>
                         </div>
-                        <a href="#" class="btn-down"></a>
+                        <a href="#event-title" class="btn-down"></a>
                     </div>
                     <div class="banner-box-gradient">
                         <div class="banner-box-gradient-left"></div>
@@ -72,7 +72,7 @@
             </div>
         </div>
         <!--2screen-->
-        <section>
+        <section id="event-title">
             <div class="container">
                 <h3 class="event-title">
                     Ближайшие события
@@ -82,7 +82,7 @@
                         <div class="event-gradient">
                             <p class="date">29.06 - 4.07</p>
                             <p class="title">Марафон выносливости</p>
-                            <a href="#background" class="button-link">учавствовать</a>
+                            <a href="#background" class="button-link">участвовать</a>
                             <p class="type">марафон</p>
                             <button class="btn-mobile"></button>
                         </div>
@@ -91,7 +91,7 @@
                         <div class="event-gradient">
                             <p class="date">9.07</p>
                             <p class="title">Как стать тренером?</p>
-                            <a href="#background" class="button-link">учавствовать</a>
+                            <a href="#background" class="button-link">участвовать</a>
                             <p class="type">вебинар</p>
                             <button class="btn-mobile"></button>
                         </div>
@@ -100,9 +100,9 @@
                         <div class="event-gradient">
                             <p class="date">15.07</p>
                             <p class="title">Йога, как стиль жизни</p>
-                            <a href="#background" class="button-link">учавствовать</a>
+                            <a href="#background" class="button-link">участвовать</a>
                             <p class="type">вебинар</p>
-                            <button class="btn-mobile"></button>
+                            <button class="btn-mobile" onclick="('modalpopap')"></button>
                         </div>
                     </div>
                 </div>
@@ -113,53 +113,53 @@
         <section>
             <div class="container">
                 <div class="time-header">
-                    <h3 class="time-title">Расписание тренировок</h3>
+                    <h3 class="time-title">Расписание<br>тренировок</h3>
                     <span class="time-date">22 - 28 июня</span>
                 </div>
                 <div class="time-grid">
                     <div class="time-grid-item">
+                        <p class="content-data">22 июня, 10:00</p>
                         <div class="time-content">
-                            <p class="content-data">22 июня, 10:00</p>
                             <img src="icons/body.svg" alt="body">
                             <h3 class="time-content-title">Функциональный тренинг</h3>
                             <p class="content-text">Разминка перед физической нагрузкой</p>
                         </div>
                     </div>
                     <div class="time-grid-item">
+                        <p class="content-data">23 июня, 10:00</p>
                         <div class="time-content">
-                            <p class="content-data">23 июня, 10:00</p>
                             <img src="icons/jump.svg" alt="jump">
                             <h3 class="time-content-title">Силовой микс</h3>
                             <p class="content-text">Упражнения помогут создать красивый рельеф и прийти в спортивную форму.</p>
                         </div>
                     </div>
                     <div class="time-grid-item">
+                        <p class="content-data">24 июня, 10:00</p>
                         <div class="time-content">
-                            <p class="content-data">24 июня, 10:00</p>
                             <img src="icons/bottle.svg" alt="bottle">
                             <h3 class="time-content-title">Body sculpt</h3>
                             <p class="content-text">Разминка перед физической нагрузкой</p>
                         </div>
                     </div>
                     <div class="time-grid-item">
+                        <p class="content-data">25 июня, 11:00</p>
                         <div class="time-content">
-                            <p class="content-data">25 июня, 11:00</p>
                             <img src="icons/heart.svg" alt="heart">
                             <h3 class="time-content-title">Дыхательные практики</h3>
                             <p class="content-text">Разминка перед физической нагрузкой</p>
                         </div>
                     </div>
                     <div class="time-grid-item">
+                        <p class="content-data">26 июня, 11:00</p>
                         <div class="time-content">
-                            <p class="content-data">26 июня, 11:00</p>
                             <img src="icons/dumbbell.svg" alt="dumbbell">
                             <h3 class="time-content-title">L.A.B.</h3>
                             <p class="content-text">Разминка перед физической нагрузкой</p>
                         </div>
                     </div>
                     <div class="time-grid-item">
+                        <p class="content-data">27 июня, 10:00</p>
                         <div class="time-content">
-                            <p class="content-data">22 июня, 10:00</p>
                             <img src="icons/weight.svg" alt="weight">
                             <h3 class="time-content-title">Комплексная разминка</h3>
                             <p class="content-text">Разминка перед физической нагрузкой</p>
@@ -275,7 +275,7 @@
                 <div class="footer-button">
                     <div class="footer-circle">
                         <span class="button-count"></span>
-                        <a href="#" class="button-info">info@freefit.com</a>  
+                        <a href="mailto:info@freefit.com" class="button-info">info@freefit.com</a>  
                     </div>
                     <div class="footer-inst-face">
                         <a href="#" class="header-IN"></a>
@@ -289,7 +289,7 @@
                 </p>
                 <p class="law-text">
                     Сделано в рамках курса учебной платформы 
-                    <a href="#" class="law-web">Annblok</a>
+                    <a href="#">Annblok</a>
                 </p>
             </div>
         </div>
